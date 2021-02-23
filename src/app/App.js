@@ -7,6 +7,12 @@
 import React from 'react'
 import { createUseStyles } from 'react-jss'
 
+import Header from 'components/Header/Header'
+
+import colors from 'styles/colors'
+
+const { colorBalck, colorWhite } = colors
+
 const useStyles = createUseStyles({
   '@global': {
     '*': {
@@ -20,12 +26,12 @@ const useStyles = createUseStyles({
     },
 
     a: {
-      color: 'white',
+      color: colorWhite,
       textDecoration: 'none',
     },
 
     body: {
-      color: 'black',
+      color: colorBalck,
       fontSize: 16,
       fontFamily: 'OpenSans-Light',
     },
@@ -43,7 +49,11 @@ const useStyles = createUseStyles({
 const App = () => {
   const classes = useStyles()
 
-  return <div className={classes.app}>app</div>
+  return (
+    <div className={classes.app}>
+      <Header />
+    </div>
+  )
 }
 
 export default App
