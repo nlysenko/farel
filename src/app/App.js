@@ -5,9 +5,11 @@
  */
 
 import React from 'react'
-import { createUseStyles } from 'react-jss'
+import { connect } from 'react-redux'
+import { ThemeProvider, createUseStyles } from 'react-jss'
 
 import Header from 'components/Header/Header'
+import Main from 'components/Main/Main'
 
 import colors from 'styles/colors'
 
@@ -34,6 +36,7 @@ const useStyles = createUseStyles({
 
     body: {
       color: colorBalck,
+      background: colorWhite,
       fontSize: 16,
       fontFamily: 'OpenSans-Light',
     },
@@ -48,14 +51,25 @@ const useStyles = createUseStyles({
   },
 })
 
-const App = () => {
-  const classes = useStyles()
+const App = (props) => {
+  const { theme } = props
 
+  useStyles()
   return (
-    <div className={classes.app}>
-      <Header />
-    </div>
+    <ThemeProvider theme={theme}>
+      <div>
+        <Header />
+
+        <Main />
+      </div>
+    </ThemeProvider>
   )
 }
 
-export default App
+const mapStateToProps = function(state) {
+  return {
+    theme: state.theme,
+  }
+}
+
+export default connect(mapStateToProps)(App)

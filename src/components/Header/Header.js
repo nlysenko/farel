@@ -5,17 +5,13 @@
  */
 
 import React from 'react'
-import { createUseStyles } from 'react-jss'
+import { createUseStyles, useTheme } from 'react-jss'
 
 import Logo from 'shared/components/Logo/Logo'
 import Navbar from 'shared/components/Navbar/Navbar'
-import Lang from 'shared/components/Lang/Lang'
+import SubMenu from 'shared/components/SubMenu/SubMenu'
 
 import LineMenuIcon from 'shared/components/LineMenuIcon/LineMenuIcon'
-
-import colors from 'styles/colors'
-
-const { menuBgColor } = colors
 
 const useStyles = createUseStyles({
   header: {
@@ -25,7 +21,8 @@ const useStyles = createUseStyles({
     right: 0,
     zIndex: 100,
     height: 60,
-    backgroundColor: menuBgColor,
+    backgroundColor: ({ theme }) => theme.mainColor,
+    transition: '0.5s',
   },
 
   container: {
@@ -33,7 +30,6 @@ const useStyles = createUseStyles({
     height: '100%',
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'space-between',
     padding: [0, 15],
     margin: [0, 'auto'],
   },
@@ -48,8 +44,9 @@ const useStyles = createUseStyles({
 })
 
 const Header = (props) => {
-  const classes = useStyles()
+  const theme = useTheme()
 
+  const classes = useStyles({ theme })
   return (
     <header className={classes.header}>
       <div className={classes.container}>
@@ -57,7 +54,7 @@ const Header = (props) => {
 
         <Navbar />
 
-        <Lang />
+        <SubMenu />
 
         <LineMenuIcon />
       </div>

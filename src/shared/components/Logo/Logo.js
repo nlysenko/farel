@@ -6,11 +6,15 @@
 
 import React from 'react'
 import { createUseStyles } from 'react-jss'
-import { Link } from 'react-scroll'
+import { animateScroll as scroll } from 'react-scroll'
 
 import Farel from 'assets/img/logo-farel.webp'
 
 const useStyles = createUseStyles({
+  wrapper: {
+    flexGrow: 1,
+  },
+
   logo: {
     display: 'block',
     width: 75,
@@ -24,12 +28,17 @@ const useStyles = createUseStyles({
 })
 
 const Logo = () => {
-  const classes = useStyles()
+  const scrollToTop = () => {
+    scroll.scrollToTop()
+  }
 
+  const classes = useStyles()
   return (
-    <Link to="#" className={classes.logo}>
-      <img className={classes.farel} src={Farel} alt="farel" />
-    </Link>
+    <div className={classes.wrapper}>
+      <i className={classes.logo} onClick={scrollToTop}>
+        <img className={classes.farel} src={Farel} alt="farel" />
+      </i>
+    </div>
   )
 }
 
