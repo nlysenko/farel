@@ -7,10 +7,8 @@
 import React, { useState } from 'react'
 import { createUseStyles, useTheme } from 'react-jss'
 import { useTranslation } from 'react-i18next'
-import { connect } from 'react-redux'
 
-import { toggleTheme } from 'app/redux/actions'
-import { darkTheme, lightTheme } from 'app/themes'
+import ThemeSwitcher from 'shared/components/ThemeSwitcher/ThemeSwitcher'
 
 const useStyles = createUseStyles({
   submenu: {
@@ -21,10 +19,6 @@ const useStyles = createUseStyles({
 
   radioGroup: {
     display: 'flex',
-
-    '@media (max-width: 790px)': {
-      display: 'none',
-    },
   },
 
   lang: {
@@ -35,7 +29,7 @@ const useStyles = createUseStyles({
     alignItems: 'center',
     cursor: 'pointer',
     marginLeft: 14,
-    borderRadius: ({ theme }) => theme.togglerLangBrRadius,
+    borderRadius: ({ theme }) => theme.brRadius,
   },
 
   active: {
@@ -65,37 +59,13 @@ const useStyles = createUseStyles({
     display: 'flex',
     flexDirection: 'column',
   },
-
-  customSelect: {
-    width: 50,
-    height: 16,
-    overflow: 'hidden',
-    backgroundColor: '#fff',
-    cursor: 'pointer',
-
-    '&:hover': {
-      height: 32,
-    },
-  },
-
-  option: {
-    paddingLeft: 3,
-    fontSize: 12,
-
-    '&:hover': {
-      backgroundColor: '#555',
-    },
-  },
 })
 
 const SubMenu = (props) => {
-  const { toggleTheme } = props
-
   const { i18n } = useTranslation()
   const theme = useTheme()
 
   const [lang, setLang] = useState(i18n.language)
-  const [darkThemeEnabled, setDarkThemeEnabled] = useState(true)
 
   const changeLanguage = (event) => {
     const language = event.target.value
@@ -103,14 +73,6 @@ const SubMenu = (props) => {
     i18n.changeLanguage(language)
 
     setLang(language)
-  }
-
-  const switchTheme = () => {
-    const theme = darkThemeEnabled ? lightTheme : darkTheme
-
-    toggleTheme(theme)
-
-    setDarkThemeEnabled(!darkThemeEnabled)
   }
 
   const classes = useStyles({ theme })
@@ -152,13 +114,11 @@ const SubMenu = (props) => {
         </label>
       </div>
 
-      <div className={classes.themeSwitcher} />
+      <div className={classes.themeSwitcher}>
+        <ThemeSwitcher />
+      </div>
     </div>
   )
 }
 
-const mapDispatchToProps = {
-  toggleTheme: toggleTheme,
-}
-
-export default connect(null, mapDispatchToProps)(SubMenu)
+export default SubMenu
