@@ -33,14 +33,6 @@ const useStyles = createUseStyles({
     padding: [0, 15],
     margin: [0, 'auto'],
   },
-
-  lineMenuIcon: {
-    display: 'none',
-
-    '@media (max-width: 790px)': {
-      display: 'block',
-    },
-  },
 })
 
 const Header = (props) => {
