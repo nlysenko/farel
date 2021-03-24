@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.js": "/farel/static/js/main.238e7a15.chunk.js",
+    "main.js.map": "/farel/static/js/main.238e7a15.chunk.js.map",
+    "runtime-main.js": "/farel/static/js/runtime-main.666a4f48.js",
+    "runtime-main.js.map": "/farel/static/js/runtime-main.666a4f48.js.map",
+    "static/js/2.9ef01855.chunk.js": "/farel/static/js/2.9ef01855.chunk.js",
+    "static/js/2.9ef01855.chunk.js.map": "/farel/static/js/2.9ef01855.chunk.js.map",
+    "index.html": "/farel/index.html",
+    "static/js/2.9ef01855.chunk.js.LICENSE.txt": "/farel/static/js/2.9ef01855.chunk.js.LICENSE.txt",
+    "static/media/getFetch.cjs": "/farel/static/media/getFetch.d7d6010d.cjs",
+    "static/media/logo-farel.585339c8.webp": "/farel/static/media/logo-farel.585339c8.webp"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.666a4f48.js",
+    "static/js/2.9ef01855.chunk.js",
+    "static/js/main.238e7a15.chunk.js"
+  ]
+}
