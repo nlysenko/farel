@@ -4,7 +4,10 @@
     "using": "Using",
     "works": "How it works?",
     "blog": "Blog",
-    "contacts": "Contacts"
+    "contacts": "Contacts",
+    "theme": "Theme",
+    "dark": "Dark",
+    "light": "Light"
   },
 
   "topSection": {
