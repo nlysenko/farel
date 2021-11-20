@@ -9,6 +9,7 @@ import { createUseStyles, useTheme } from 'react-jss'
 
 import Logo from 'shared/components/Logo/Logo'
 import Navbar from 'shared/components/Navbar/Navbar'
+import SubMenu from 'shared/components/SubMenu/SubMenu'
 
 const useStyles = createUseStyles({
   menu: {
@@ -57,6 +58,10 @@ const useStyles = createUseStyles({
     },
     borderBottomColor: ({ theme }) => theme.mobileMenuLineColor,
   },
+
+  subMenuWrapper: {
+    paddingTop: 15,
+  },
 })
 
 const MobileMenu = (props) => {
@@ -77,6 +82,10 @@ const MobileMenu = (props) => {
 
       <div className={classes.navbarWrapper}>
         <Navbar />
+      </div>
+
+      <div className={classes.subMenuWrapper}>
+        <SubMenu />
       </div>
     </div>
   )
