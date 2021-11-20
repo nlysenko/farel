@@ -33,9 +33,28 @@ const useStyles = createUseStyles({
     padding: [0, 15],
     margin: [0, 'auto'],
   },
+
+  navbarWrapper: {
+    flexGrow: 5,
+    padding: [0, 20],
+
+    '@media (max-width: 790px)': {
+      display: 'none',
+    },
+  },
+
+  subMenuWrapper: {
+    flexGrow: 1,
+
+    '@media (max-width: 790px)': {
+      display: 'none',
+    },
+  },
 })
 
 const Header = (props) => {
+  const { toggleMobileMenu } = props
+
   const theme = useTheme()
 
   const classes = useStyles({ theme })
@@ -44,11 +63,15 @@ const Header = (props) => {
       <div className={classes.container}>
         <Logo />
 
-        <Navbar />
+        <div className={classes.navbarWrapper}>
+          <Navbar />
+        </div>
 
-        <SubMenu />
+        <div className={classes.subMenuWrapper}>
+          <SubMenu />
+        </div>
 
-        <LineMenuIcon />
+        <LineMenuIcon toggleMobileMenu={toggleMobileMenu} />
       </div>
     </header>
   )

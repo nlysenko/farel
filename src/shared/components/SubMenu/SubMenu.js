@@ -13,8 +13,7 @@ import ThemeSwitcher from 'shared/components/ThemeSwitcher/ThemeSwitcher'
 const useStyles = createUseStyles({
   submenu: {
     display: 'flex',
-    justifyContent: 'flex-end',
-    flexGrow: 1,
+    justifyContent: 'space-around',
   },
 
   radioGroup: {
@@ -28,8 +27,11 @@ const useStyles = createUseStyles({
     justifyContent: 'center',
     alignItems: 'center',
     cursor: 'pointer',
-    marginLeft: 14,
     borderRadius: ({ theme }) => theme.brRadius,
+
+    '&:last-child': {
+      marginLeft: 14,
+    },
   },
 
   active: {

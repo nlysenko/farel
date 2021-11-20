@@ -9,6 +9,7 @@ import { createUseStyles } from 'react-jss'
 
 const useStyles = createUseStyles({
   container: {
+    height: 2000,
     maxWidth: 930,
     padding: [0, 15],
     margin: [0, 'auto'],

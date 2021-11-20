@@ -4,16 +4,13 @@
  *
  */
 
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { connect } from 'react-redux'
 import { ThemeProvider, createUseStyles } from 'react-jss'
 
 import Header from 'components/Header/Header'
 import Main from 'components/Main/Main'
-
-import colors from 'styles/colors'
-
-const { colorBalck, colorWhite } = colors
+import MobileMenu from 'shared/components/MobileMenu/MobileMenu'
 
 const useStyles = createUseStyles({
   '@global': {
@@ -30,13 +27,13 @@ const useStyles = createUseStyles({
     },
 
     a: {
-      color: colorWhite,
+      color: '#fff',
       textDecoration: 'none',
     },
 
     body: {
-      color: colorBalck,
-      background: colorWhite,
+      color: '#000',
+      backgroundColor: '#fff',
       fontSize: 16,
       fontFamily: 'OpenSans-Light',
     },
@@ -49,16 +46,65 @@ const useStyles = createUseStyles({
       font: 'inherit',
     },
   },
+
+  overlay: {
+    position: 'fixed',
+    zIndex: 200,
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    backgroundColor: '#000',
+    opacity: 0.3,
+    display: 'none',
+
+    '@media (max-width: 790px)': {
+      display: 'block',
+    },
+  },
 })
 
 const App = (props) => {
   const { theme } = props
 
-  useStyles()
+  const [mobileMenuIsVisible, setMobileMenuIsVisible] = useState(false)
+  const [overlaysIsVisible, setOverlaysIsVisible] = useState(false)
+
+  const toggleMobileMenu = () => {
+    setMobileMenuIsVisible(!mobileMenuIsVisible)
+  }
+
+  useEffect(() => {
+    function handleResize() {
+      setOverlaysIsVisible(window.innerWidth < 790)
+    }
+
+    window.addEventListener('resize', handleResize)
+
+    handleResize()
+
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
+
+  useEffect(() => {
+    if (mobileMenuIsVisible && overlaysIsVisible) {
+      document.body.style.overflow = 'hidden'
+    } else document.body.style.overflow = 'visible'
+  }, [mobileMenuIsVisible, overlaysIsVisible])
+
+  const classes = useStyles()
   return (
     <ThemeProvider theme={theme}>
+      {mobileMenuIsVisible && overlaysIsVisible ? (
+        <div className={classes.overlay} onClick={toggleMobileMenu} />
+      ) : (
+        false
+      )}
+
+      <MobileMenu mobileMenuIsVisible={mobileMenuIsVisible} />
+
       <div>
-        <Header />
+        <Header toggleMobileMenu={toggleMobileMenu} />
 
         <Main />
       </div>

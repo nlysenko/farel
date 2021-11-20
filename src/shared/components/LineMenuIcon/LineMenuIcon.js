@@ -5,11 +5,11 @@
  */
 
 import React from 'react'
-import { createUseStyles } from 'react-jss'
+import { createUseStyles, useTheme } from 'react-jss'
 
 import colors from 'styles/colors'
 
-const { colorWhite, lightGrayColor } = colors
+const { lightGrayColor } = colors
 
 const useStyles = createUseStyles({
   icon: {
@@ -20,7 +20,7 @@ const useStyles = createUseStyles({
     transition: '0.5s',
 
     '&:hover>span': {
-      background: lightGrayColor,
+      backgroundColor: lightGrayColor,
     },
 
     '@media (max-width: 790px)': {
@@ -38,8 +38,8 @@ const useStyles = createUseStyles({
     display: 'block',
     width: '100%',
     height: 5,
-    background: colorWhite,
-    borderRadius: 3,
+    backgroundColor: ({ theme }) => theme.mainTextColor,
+    borderRadius: ({ theme }) => theme.brRadius,
 
     '&:nth-child(2)': {
       margin: [5, 0],
@@ -47,11 +47,14 @@ const useStyles = createUseStyles({
   },
 })
 
-const LineMenuIcon = () => {
-  const classes = useStyles()
+const LineMenuIcon = (props) => {
+  const { toggleMobileMenu } = props
 
+  const theme = useTheme()
+
+  const classes = useStyles({ theme })
   return (
-    <i className={classes.icon}>
+    <i className={classes.icon} onClick={toggleMobileMenu}>
       <span className={classes.line} />
       <span className={classes.line} />
       <span className={classes.line} />

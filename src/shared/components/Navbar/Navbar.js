@@ -11,24 +11,21 @@ import { useTranslation } from 'react-i18next'
 
 const useStyles = createUseStyles({
   navbar: {
-    flexGrow: 5,
-    '@media (max-width: 790px)': {
-      display: 'none',
-    },
+    display: 'flex',
   },
 
   navbarList: {
     display: 'flex',
+    width: '100%',
     justifyContent: 'space-between',
   },
 
   navItem: {
-    // paddingLeft: 30,
     height: 25,
 
-    // '&:last-child': {
-    //   paddingLeft: 40,
-    // },
+    '&:last-child': {
+      paddingLeft: 10,
+    },
   },
 
   navLink: {
