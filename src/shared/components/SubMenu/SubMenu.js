@@ -4,7 +4,7 @@
  *
  */
 
-import React, { useState } from 'react'
+import React from 'react'
 import { createUseStyles, useTheme } from 'react-jss'
 import { useTranslation } from 'react-i18next'
 
@@ -67,14 +67,10 @@ const SubMenu = (props) => {
   const { i18n } = useTranslation()
   const theme = useTheme()
 
-  const [lang, setLang] = useState(i18n.language)
-
   const changeLanguage = (event) => {
     const language = event.target.value
 
     i18n.changeLanguage(language)
-
-    setLang(language)
   }
 
   const classes = useStyles({ theme })
@@ -82,7 +78,9 @@ const SubMenu = (props) => {
     <div className={classes.submenu}>
       <div className={classes.radioGroup}>
         <label
-          className={`${classes.lang} ${lang === 'en' ? classes.active : ''}`}
+          className={`${classes.lang} ${
+            i18n.language === 'en' ? classes.active : ''
+          }`}
           htmlFor="en"
         >
           <span className={classes.name}>EN</span>
@@ -93,13 +91,15 @@ const SubMenu = (props) => {
             name="lang"
             id="en"
             value="en"
-            checked={lang === 'en'}
+            checked={i18n.language === 'en'}
             onChange={changeLanguage}
           />
         </label>
 
         <label
-          className={`${classes.lang} ${lang === 'ru' ? classes.active : ''}`}
+          className={`${classes.lang} ${
+            i18n.language === 'ru' ? classes.active : ''
+          }`}
           htmlFor="ru"
         >
           <span className={classes.name}>RU</span>
@@ -110,7 +110,7 @@ const SubMenu = (props) => {
             name="lang"
             id="ru"
             value="ru"
-            checked={lang === 'ru'}
+            checked={i18n.language === 'ru'}
             onChange={changeLanguage}
           />
         </label>
