@@ -8,6 +8,7 @@ import React from 'react'
 import { createUseStyles, useTheme } from 'react-jss'
 
 import Logo from 'shared/components/Logo/Logo'
+import Navbar from 'shared/components/Navbar/Navbar'
 
 const useStyles = createUseStyles({
   menu: {
@@ -44,6 +45,18 @@ const useStyles = createUseStyles({
     },
     borderBottomColor: ({ theme }) => theme.mobileMenuLineColor,
   },
+
+  navbarWrapper: {
+    padding: {
+      left: 15,
+      bottom: 15,
+    },
+    borderBottom: {
+      style: 'solid',
+      width: 1,
+    },
+    borderBottomColor: ({ theme }) => theme.mobileMenuLineColor,
+  },
 })
 
 const MobileMenu = (props) => {
@@ -60,6 +73,10 @@ const MobileMenu = (props) => {
     >
       <div className={classes.logoWrapper}>
         <Logo />
+      </div>
+
+      <div className={classes.navbarWrapper}>
+        <Navbar />
       </div>
     </div>
   )

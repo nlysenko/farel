@@ -18,6 +18,10 @@ const useStyles = createUseStyles({
     display: 'flex',
     width: '100%',
     justifyContent: 'space-between',
+
+    '@media (max-width: 790px)': {
+      flexDirection: 'column',
+    },
   },
 
   navItem: {
@@ -25,6 +29,14 @@ const useStyles = createUseStyles({
 
     '&:last-child': {
       paddingLeft: 10,
+
+      '@media (max-width: 790px)': {
+        paddingLeft: '0',
+      },
+    },
+
+    '@media (max-width: 790px)': {
+      marginTop: 15,
     },
   },
 
