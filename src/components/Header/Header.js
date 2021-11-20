@@ -34,6 +34,10 @@ const useStyles = createUseStyles({
     margin: [0, 'auto'],
   },
 
+  logoWrapper: {
+    flexGrow: 1,
+  },
+
   navbarWrapper: {
     flexGrow: 5,
     padding: [0, 20],
@@ -61,7 +65,9 @@ const Header = (props) => {
   return (
     <header className={classes.header}>
       <div className={classes.container}>
-        <Logo />
+        <div className={classes.logoWrapper}>
+          <Logo />
+        </div>
 
         <div className={classes.navbarWrapper}>
           <Navbar />

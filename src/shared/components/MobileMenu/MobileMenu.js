@@ -7,6 +7,8 @@
 import React from 'react'
 import { createUseStyles, useTheme } from 'react-jss'
 
+import Logo from 'shared/components/Logo/Logo'
+
 const useStyles = createUseStyles({
   menu: {
     position: 'fixed',
@@ -30,6 +32,18 @@ const useStyles = createUseStyles({
     left: 0,
     transition: '0.5s',
   },
+
+  logoWrapper: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: 70,
+    borderBottom: {
+      style: 'solid',
+      width: 1,
+    },
+    borderBottomColor: ({ theme }) => theme.mobileMenuLineColor,
+  },
 })
 
 const MobileMenu = (props) => {
@@ -43,7 +57,11 @@ const MobileMenu = (props) => {
       className={`${classes.menu} ${
         mobileMenuIsVisible ? classes.menuIsActive : ''
       }`}
-    ></div>
+    >
+      <div className={classes.logoWrapper}>
+        <Logo />
+      </div>
+    </div>
   )
 }
 

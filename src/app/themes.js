@@ -15,6 +15,7 @@ export const darkTheme = {
   togglerBgColor: 'rgb(255, 191, 0)',
   togglerActiveBgColor: 'rgb(255, 207, 64)',
   menuBgColor: 'rgb(255, 220, 115)',
+  mobileMenuLineColor: 'rgb(132, 132, 132)',
 
   //borders
   brRadius: 0,
@@ -31,8 +32,8 @@ export const lightTheme = {
   togglerBgColor: 'rgb(211, 207, 197)',
   togglerActiveBgColor: 'rgb(222, 222, 222)',
   menuBgColor: 'rgb(236, 232, 226)',
+  mobileMenuLineColor: 'rgb(144, 221, 221)',
 
   //borders
-
   brRadius: 5,
 }
