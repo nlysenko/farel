@@ -33,7 +33,7 @@ const useStyles = createUseStyles({
 
     body: {
       color: '#000',
-      backgroundColor: '#fff',
+      backgroundColor: 'rgb(243, 243, 243)',
       fontSize: 16,
       fontFamily: 'OpenSans-Light',
     },

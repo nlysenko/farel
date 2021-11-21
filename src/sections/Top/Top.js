@@ -15,17 +15,15 @@ const useStyles = createUseStyles({
   container: {
     maxWidth: 930,
     textAlign: 'center',
-    padding: {
-      top: 50,
-      left: 15,
-      right: 15,
-    },
+    padding: [0, 15],
     margin: [0, 'auto'],
   },
 
   caption: {
+    padding: [43, 0, 6, 0],
     fontFamily: 'Exo2-Light',
     fontSize: 31,
+    textTransform: 'uppercase',
     color: ({ theme }) => theme.headerColor,
 
     '@media (max-width: 790px)': {
@@ -34,7 +32,7 @@ const useStyles = createUseStyles({
   },
 
   info: {
-    paddingTop: 15,
+    paddingLeft: 45,
     fontSize: 20,
     fontFamily: 'Exo2-Light',
     color: ({ theme }) => theme.infoColor,
@@ -47,20 +45,24 @@ const useStyles = createUseStyles({
   eye: {
     maxWidth: '100%',
     height: 'auto',
-    marginTop: 50,
+    marginTop: 51,
   },
 
   inner: {
     display: 'flex',
     justifyContent: 'center',
-    marginTop: 40,
+    marginTop: 44,
   },
 
   scrollLink: {
     display: 'flex',
     cursor: 'pointer',
-    width: 20,
+    width: 16,
     flexDirection: 'column',
+
+    '&:hover > i': {
+      borderColor: ({ theme }) => theme.arrowActiveColor,
+    },
   },
 
   scrollIcon: {
@@ -74,7 +76,7 @@ const useStyles = createUseStyles({
     borderTopStyle: 'none',
     transform: 'rotate(45deg)',
 
-    '&:hover': {
+    '&:nth-child(2)': {
       borderColor: ({ theme }) => theme.arrowActiveColor,
     },
   },
