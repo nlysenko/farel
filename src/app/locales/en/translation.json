@@ -4,6 +4,14 @@
     "using": "Using",
     "works": "How it works?",
     "blog": "Blog",
-    "contacts": "Contacts"
+    "contacts": "Contacts",
+    "theme": "Theme",
+    "dark": "Dark",
+    "light": "Light"
+  },
+
+  "topSection": {
+    "caption": "Augmented and virtual reality studio",
+    "info": "we see things that you never dreamed of"
   }
 }

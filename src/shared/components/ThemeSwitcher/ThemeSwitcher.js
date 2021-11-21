@@ -10,17 +10,19 @@ import { CSSTransition } from 'react-transition-group'
 import cx from 'classnames'
 import { createUseStyles, useTheme } from 'react-jss'
 
+import { useTranslation } from 'react-i18next'
+
 import { toggleTheme } from 'app/redux/actions'
 import { darkTheme, lightTheme } from 'app/themes'
 
 import useOutsideClick from 'app/useOutsideClick'
 
 const vars = {
-  togglerWidth: '60px',
+  togglerWidth: '70px',
   togglerHeight: '20px',
   menuStartingTop: '5px',
   menuEndingTop: '30px',
-  menuWidth: '60px',
+  menuWidth: '70px',
   menuMaxHeight: '60px',
   fadeFromColor: 'transparent',
   fadeToColor: 'black',
@@ -145,6 +147,8 @@ const ThemeSwitcher = (props) => {
 
   const nodeRef = useRef(null)
 
+  const { t } = useTranslation()
+
   const classes = useStyles({ theme })
   return (
     <div className={classes.container}>
@@ -155,7 +159,7 @@ const ThemeSwitcher = (props) => {
         ref={ref}
         onClick={toggleMenu}
       >
-        Theme
+        {t('header.theme')}
       </button>
 
       <CSSTransition
@@ -179,7 +183,7 @@ const ThemeSwitcher = (props) => {
                 }`}
                 onClick={() => switchTheme(darkTheme)}
               >
-                Dark
+                {t('header.dark')}
               </li>
 
               <li
@@ -188,7 +192,7 @@ const ThemeSwitcher = (props) => {
                 }`}
                 onClick={() => switchTheme(lightTheme)}
               >
-                Light
+                {t('header.light')}
               </li>
             </ul>
           </div>
