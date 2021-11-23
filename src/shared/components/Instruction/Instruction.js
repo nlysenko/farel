@@ -9,8 +9,11 @@ import { createUseStyles, useTheme } from 'react-jss'
 import { Link } from 'react-scroll'
 import { useTranslation } from 'react-i18next'
 
-import AppStoreIcon from 'assets/img/app-store-icon.webp'
-import GooglePlayIcon from 'assets/img/google-play-icon.webp'
+import AppStore from 'assets/img/app-store-icon.webp'
+import GooglePlay from 'assets/img/google-play-icon.webp'
+import Phone from 'assets/img/phone.webp'
+import Airplane from 'assets/img/airplane.webp'
+import Logo from 'assets/img/logo-farel.webp'
 
 const useStyles = createUseStyles({
   instruction: {
@@ -72,7 +75,7 @@ const useStyles = createUseStyles({
     display: 'flex',
   },
 
-  googlePlayIcon: {
+  googlePlay: {
     width: 40,
     height: 'auto',
     margin: { left: 25, right: 60 },
@@ -82,9 +85,59 @@ const useStyles = createUseStyles({
     },
   },
 
-  appStoreIcon: {
+  appStore: {
     width: 40,
     height: 'auto',
+  },
+
+  wrapper: {
+    padding: { left: 19, bottom: 10 },
+  },
+
+  ellipse: {
+    display: 'block',
+    width: 7,
+    height: 7,
+    borderRadius: '100%',
+    backgroundColor: ({ theme }) => theme.togglerLangBgColor,
+
+    '&:first-child': {
+      marginTop: 14,
+    },
+
+    '&:last-child': {
+      marginTop: 11,
+    },
+  },
+
+  logo: {
+    width: 73,
+    height: 'auto',
+    marginRight: 20,
+
+    '@media (max-width: 790px)': {
+      marginRight: 0,
+    },
+  },
+
+  plus: {
+    fontSize: 27,
+    padding: { left: 14, right: 16 },
+    color: ({ theme }) => theme.togglerLangBgColor,
+
+    '@media (max-width: 790px)': {
+      padding: { left: 5, right: 5 },
+    },
+  },
+
+  airplane: {
+    width: 106,
+    height: 'auto',
+    marginRight: 55,
+
+    '@media (max-width: 790px)': {
+      marginRight: 0,
+    },
   },
 })
 
@@ -100,7 +153,7 @@ const Instruction = () => {
         <i className={classes.counter}>1</i>
 
         <p className={classes.content}>
-          {t('topSection.instruction')}
+          {t('topSection.instruction1')}
           <Link to="#" className={classes.brandLink}>
             Farel
           </Link>
@@ -108,17 +161,45 @@ const Instruction = () => {
           {i18n.language === 'en' ? 'app' : ''}
         </p>
 
-        <img
-          src={AppStoreIcon}
-          className={classes.appStoreIcon}
-          alt="app-store-icon"
-        />
+        <img src={AppStore} className={classes.appStore} alt="app-store" />
 
         <img
-          src={GooglePlayIcon}
-          className={classes.googlePlayIcon}
-          alt="google-play-icon"
+          src={GooglePlay}
+          className={classes.googlePlay}
+          alt="google-play"
         />
+      </div>
+
+      <div className={classes.wrapper}>
+        <i className={classes.ellipse} />
+
+        <i className={classes.ellipse} />
+      </div>
+
+      <div className={classes.item}>
+        <i className={classes.counter}>2</i>
+
+        <p className={classes.content}>{t('topSection.instruction2')}</p>
+
+        <img src={Phone} className={classes.phone} alt="phone" />
+
+        <p className={classes.plus}>+</p>
+
+        <img src={Logo} className={classes.logo} alt="logo-farel" />
+      </div>
+
+      <div className={classes.wrapper}>
+        <i className={classes.ellipse} />
+
+        <i className={classes.ellipse} />
+      </div>
+
+      <div className={classes.item}>
+        <i className={classes.counter}>3</i>
+
+        <p className={classes.content}>{t('topSection.instruction3')}</p>
+
+        <img src={Airplane} className={classes.airplane} alt="airplane" />
       </div>
     </div>
   )

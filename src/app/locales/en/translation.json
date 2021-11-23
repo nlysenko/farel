@@ -13,6 +13,8 @@
   "topSection": {
     "caption": "Augmented and virtual reality studio",
     "info": "we see things that you never dreamed of",
-    "instruction": "Download and install the"
+    "instruction1": "Download and install the",
+    "instruction2": "Point the camera at our logo",
+    "instruction3": "Explore the world of augmented reality!"
   }
 }
