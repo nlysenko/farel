@@ -44,7 +44,6 @@ const useStyles = createUseStyles({
     fontSize: 15,
     paddingBottom: 5,
     color: ({ theme }) => theme.mainTextColor,
-    transition: '0.5s',
 
     '&:hover': {
       cursor: 'pointer',

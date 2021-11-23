@@ -98,7 +98,14 @@ const Top = () => {
         <img src={Eye} className={classes.eyeImg} alt="eye" />
 
         <div className={classes.inner}>
-          <Link to="#" className={classes.scrollLink}>
+          <Link
+            to="using"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+            className={classes.scrollLink}
+          >
             <i className={classes.scrollIcon} />
 
             <i className={classes.scrollIcon} />
