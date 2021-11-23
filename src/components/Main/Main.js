@@ -22,6 +22,8 @@ const Main = () => {
   return (
     <main className={classes.main}>
       <Top />
+
+      <Using />
     </main>
   )
 }

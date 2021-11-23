@@ -36,6 +36,7 @@ const useStyles = createUseStyles({
       backgroundColor: 'rgb(243, 243, 243)',
       fontSize: 16,
       fontFamily: 'OpenSans-Light',
+      paddingBottom: 400,
     },
 
     ul: {

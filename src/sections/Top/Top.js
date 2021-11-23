@@ -42,7 +42,7 @@ const useStyles = createUseStyles({
     },
   },
 
-  eye: {
+  eyeImg: {
     maxWidth: '100%',
     height: 'auto',
     marginTop: 51,
@@ -89,16 +89,23 @@ const Top = () => {
 
   const classes = useStyles({ theme })
   return (
-    <section className={classes.topSection} id="top">
+    <section id="top">
       <div className={classes.container}>
         <h1 className={classes.caption}>{t('topSection.caption')}</h1>
 
         <p className={classes.info}>{t('topSection.info')}</p>
 
-        <img src={Eye} className={classes.eye} alt="eye" />
+        <img src={Eye} className={classes.eyeImg} alt="eye" />
 
         <div className={classes.inner}>
-          <Link to="#" className={classes.scrollLink}>
+          <Link
+            to="using"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+            className={classes.scrollLink}
+          >
             <i className={classes.scrollIcon} />
 
             <i className={classes.scrollIcon} />
