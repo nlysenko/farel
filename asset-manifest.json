@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/farel/static/js/main.b53bdd6b.chunk.js",
-    "main.js.map": "/farel/static/js/main.b53bdd6b.chunk.js.map",
+    "main.js": "/farel/static/js/main.740815db.chunk.js",
+    "main.js.map": "/farel/static/js/main.740815db.chunk.js.map",
     "runtime-main.js": "/farel/static/js/runtime-main.666a4f48.js",
     "runtime-main.js.map": "/farel/static/js/runtime-main.666a4f48.js.map",
     "static/js/2.38e94cb0.chunk.js": "/farel/static/js/2.38e94cb0.chunk.js",
@@ -10,15 +10,18 @@
     "static/js/2.38e94cb0.chunk.js.LICENSE.txt": "/farel/static/js/2.38e94cb0.chunk.js.LICENSE.txt",
     "static/media/airplane.66bee7c4.webp": "/farel/static/media/airplane.66bee7c4.webp",
     "static/media/app-store-icon.771cf2fb.webp": "/farel/static/media/app-store-icon.771cf2fb.webp",
+    "static/media/app-store-qr.91964a48.webp": "/farel/static/media/app-store-qr.91964a48.webp",
+    "static/media/apple-icon.f17909d3.webp": "/farel/static/media/apple-icon.f17909d3.webp",
     "static/media/eye.7f43d894.webp": "/farel/static/media/eye.7f43d894.webp",
     "static/media/getFetch.cjs": "/farel/static/media/getFetch.d7d6010d.cjs",
     "static/media/google-play-icon.597a1916.webp": "/farel/static/media/google-play-icon.597a1916.webp",
+    "static/media/google-play-qr.91964a48.webp": "/farel/static/media/google-play-qr.91964a48.webp",
     "static/media/logo-farel.585339c8.webp": "/farel/static/media/logo-farel.585339c8.webp",
     "static/media/phone.22cbe7c2.webp": "/farel/static/media/phone.22cbe7c2.webp"
   },
   "entrypoints": [
     "static/js/runtime-main.666a4f48.js",
     "static/js/2.38e94cb0.chunk.js",
-    "static/js/main.b53bdd6b.chunk.js"
+    "static/js/main.740815db.chunk.js"
   ]
 }
