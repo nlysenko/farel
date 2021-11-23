@@ -12,9 +12,16 @@
 
   "topSection": {
     "caption": "Augmented and virtual reality studio",
-    "info": "we see things that you never dreamed of",
+    "info": "we see things that you never dreamed of"
+  },
+
+  "useSection": {
     "instruction1": "Download and install the",
     "instruction2": "Point the camera at our logo",
     "instruction3": "Explore the world of augmented reality!"
+  },
+
+  "tekrum": {
+    "info": "Tekrum is a creative and highly professional team of programmers, designers, account managers, testers, which develops web applications, services for online commerce, as well as product activities within our projects. We provide innovative IT solutions to customers around the world."
   }
 }

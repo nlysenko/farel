@@ -153,7 +153,7 @@ const Instruction = () => {
         <i className={classes.counter}>1</i>
 
         <p className={classes.content}>
-          {t('topSection.instruction1')}
+          {t('useSection.instruction1')}
           <Link to="#" className={classes.brandLink}>
             Farel
           </Link>
@@ -179,7 +179,7 @@ const Instruction = () => {
       <div className={classes.item}>
         <i className={classes.counter}>2</i>
 
-        <p className={classes.content}>{t('topSection.instruction2')}</p>
+        <p className={classes.content}>{t('useSection.instruction2')}</p>
 
         <img src={Phone} className={classes.phone} alt="phone" />
 
@@ -197,7 +197,7 @@ const Instruction = () => {
       <div className={classes.item}>
         <i className={classes.counter}>3</i>
 
-        <p className={classes.content}>{t('topSection.instruction3')}</p>
+        <p className={classes.content}>{t('useSection.instruction3')}</p>
 
         <img src={Airplane} className={classes.airplane} alt="airplane" />
       </div>

@@ -9,6 +9,7 @@ import { createUseStyles } from 'react-jss'
 
 import Top from 'sections/Top/Top'
 import Using from 'sections/Using/Using'
+import Tekrum from 'sections/Tekrum/Tekrum'
 
 const useStyles = createUseStyles({
   main: {
@@ -24,6 +25,8 @@ const Main = () => {
       <Top />
 
       <Using />
+
+      <Tekrum />
     </main>
   )
 }
