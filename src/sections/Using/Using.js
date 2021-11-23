@@ -9,6 +9,7 @@ import { createUseStyles, useTheme } from 'react-jss'
 
 import BrandName from 'shared/components/BrandName/BrandName'
 import Instruction from 'shared/components/Instruction/Instruction'
+import Markets from 'shared/components/Markets/Markets'
 
 const useStyles = createUseStyles({
   container: {
@@ -28,6 +29,8 @@ const Using = () => {
         <BrandName />
 
         <Instruction />
+
+        <Markets />
       </div>
     </section>
   )
