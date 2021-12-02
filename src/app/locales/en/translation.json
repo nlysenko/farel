@@ -27,5 +27,12 @@
 
   "companies": {
     "caption": "The use of augmented reality by global companies"
+  },
+
+  "useOnMobile": {
+    "caption": "Use on a mobile phone",
+    "instruction1": "Download and install applications",
+    "instruction2": "Launch applications and point the camera at the target",
+    "instruction3": "Use augmented reality"
   }
 }
