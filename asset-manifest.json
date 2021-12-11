@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/farel/static/js/main.9eace4cb.chunk.js",
-    "main.js.map": "/farel/static/js/main.9eace4cb.chunk.js.map",
+    "main.js": "/farel/static/js/main.5c53aa78.chunk.js",
+    "main.js.map": "/farel/static/js/main.5c53aa78.chunk.js.map",
     "runtime-main.js": "/farel/static/js/runtime-main.666a4f48.js",
     "runtime-main.js.map": "/farel/static/js/runtime-main.666a4f48.js.map",
-    "static/js/2.ec5344fc.chunk.js": "/farel/static/js/2.ec5344fc.chunk.js",
-    "static/js/2.ec5344fc.chunk.js.map": "/farel/static/js/2.ec5344fc.chunk.js.map",
+    "static/js/2.4ac8e6d7.chunk.js": "/farel/static/js/2.4ac8e6d7.chunk.js",
+    "static/js/2.4ac8e6d7.chunk.js.map": "/farel/static/js/2.4ac8e6d7.chunk.js.map",
     "index.html": "/farel/index.html",
-    "static/js/2.ec5344fc.chunk.js.LICENSE.txt": "/farel/static/js/2.ec5344fc.chunk.js.LICENSE.txt",
+    "static/js/2.4ac8e6d7.chunk.js.LICENSE.txt": "/farel/static/js/2.4ac8e6d7.chunk.js.LICENSE.txt",
     "static/media/airplane.66bee7c4.webp": "/farel/static/media/airplane.66bee7c4.webp",
     "static/media/app-store-icon.771cf2fb.webp": "/farel/static/media/app-store-icon.771cf2fb.webp",
     "static/media/app-store-qr.91964a48.webp": "/farel/static/media/app-store-qr.91964a48.webp",
@@ -29,7 +29,7 @@
   },
   "entrypoints": [
     "static/js/runtime-main.666a4f48.js",
-    "static/js/2.ec5344fc.chunk.js",
-    "static/js/main.9eace4cb.chunk.js"
+    "static/js/2.4ac8e6d7.chunk.js",
+    "static/js/main.5c53aa78.chunk.js"
   ]
 }
