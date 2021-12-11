@@ -16,22 +16,23 @@ const useStyles = createUseStyles({
     height: 35,
     minWidth: 35,
     borderRadius: '50%',
-    margin: 9,
+    margin: ({ margin }) => `${margin}px`,
     border: {
       width: 1,
       style: 'solid',
     },
     borderColor: ({ theme }) => theme.togglerLangBgColor,
     fontSize: 23,
+    fontStyle: 'normal',
     color: ({ theme }) => theme.togglerLangBgColor,
   },
 })
 
-const Circle = ({ number }) => {
+const Circle = ({ number, margin }) => {
   const theme = useTheme()
+  const classes = useStyles({ theme, margin })
 
-  const classes = useStyles({ theme })
-  return <span className={classes.circle}>{number}</span>
+  return <i className={classes.circle}>{number}</i>
 }
 
 export default Circle

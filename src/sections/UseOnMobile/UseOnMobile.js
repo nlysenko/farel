@@ -6,13 +6,14 @@
 
 import React from 'react'
 import { createUseStyles, useTheme } from 'react-jss'
-import { useTranslation } from 'react-i18next'
 
-import PlayBtn from 'shared/components/PlayBtn/PlayBtn'
-import StepItem from 'shared/components/StepItem/StepItem'
+import Heading from './components/Heading'
+import FirstStep from './components/FirstStep'
+import SecondStep from './components/SecondStep'
+import ThirdStep from './components/ThirdStep'
 
 const useStyles = createUseStyles({
-  mobile: {
+  useOnMobile: {
     backgroundColor: ({ theme }) => theme.mainColor,
     marginTop: 42,
   },
@@ -25,56 +26,30 @@ const useStyles = createUseStyles({
 
   wrapper: {
     display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    paddingTop: 31,
-  },
-
-  caption: {
-    fontFamily: 'Exo2-Light',
-    fontSize: 28,
-    textTransform: 'uppercase',
-    textAlign: 'center',
-    color: ({ theme }) => theme.mainTextColor,
-    padding: {
-      left: 80,
-      right: 27,
-    },
-
-    '@media (max-width: 790px)': {
-      fontSize: 20,
-      paddingLeft: 27,
-    },
-  },
-
-  step: {
-    maxWidth: 270,
+    maxWidth: 620,
     margin: [0, 'auto'],
-    paddingRight: 20,
+    padding: {
+      left: 40,
+      bottom: 28,
+    },
   },
 })
 
 const UseOnMobile = () => {
   const theme = useTheme()
-
-  const { t } = useTranslation()
-
   const classes = useStyles({ theme })
+
   return (
-    <section className={classes.mobile}>
+    <section className={classes.useOnMobile}>
       <div className={classes.container}>
+        <Heading />
+
         <div className={classes.wrapper}>
-          <h1 className={classes.caption}>{t('useOnMobile.caption')}</h1>
+          <FirstStep />
 
-          <PlayBtn white />
-        </div>
+          <SecondStep />
 
-        <div className={classes.step}>
-          <StepItem
-            name={t('useOnMobile.instruction2')}
-            num="2"
-            flexDirection="column-reverse"
-          />
+          <ThirdStep />
         </div>
       </div>
     </section>

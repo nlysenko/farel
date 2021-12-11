@@ -7,7 +7,7 @@
 import React from 'react'
 import { createUseStyles, useTheme } from 'react-jss'
 
-import Circle from 'shared/components/Circle/Circle'
+import Circle from '../UI/icons/Circle'
 
 const useStyles = createUseStyles({
   step: {
@@ -19,20 +19,22 @@ const useStyles = createUseStyles({
   stepName: {
     fontSize: 15,
     color: ({ theme }) => theme.mainTextColor,
-    textAlign: 'center',
     lineHeight: 1.2,
+    textAlign: 'center',
   },
 })
 
-const StepItem = ({ name, num, flexDirection }) => {
+const StepItem = ({ options, stylization }) => {
+  const { flexDirection, margin } = stylization
+  const { name, num } = options
   const theme = useTheme()
-
   const classes = useStyles({ theme, flexDirection })
+
   return (
     <div className={classes.step}>
       <p className={classes.stepName}>{name}</p>
 
-      <Circle number={num} />
+      <Circle number={num} margin={margin} />
     </div>
   )
 }
