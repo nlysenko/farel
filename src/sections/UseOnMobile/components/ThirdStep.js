@@ -21,6 +21,11 @@ const useStyles = createUseStyles({
     maxWidth: 256,
     paddingTop: 142,
     marginLeft: -29,
+
+    '@media (max-width: 680px)': {
+      paddingTop: 40,
+      marginLeft: 0,
+    },
   },
 
   wrapper: {
@@ -35,7 +40,12 @@ const useStyles = createUseStyles({
   },
 
   stepItemWrap: {
+    minWidth: 256,
     paddingRight: 52,
+
+    '@media (max-width: 680px)': {
+      paddingRight: 0,
+    },
   },
 
   planetInMobile: {

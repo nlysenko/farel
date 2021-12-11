@@ -19,7 +19,17 @@ import TShapedLines from '../UI/figures/TShapedLines'
 const useStyles = createUseStyles({
   firstStep: {
     maxWidth: 220,
-    padding: { top: 142, left: 5 },
+    padding: {
+      top: 142,
+      left: 5,
+    },
+
+    '@media (max-width: 680px)': {
+      padding: {
+        top: 40,
+        left: 0,
+      },
+    },
   },
 
   wrapper: {

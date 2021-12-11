@@ -32,6 +32,12 @@ const useStyles = createUseStyles({
       left: 40,
       bottom: 28,
     },
+
+    '@media (max-width: 680px)': {
+      paddingLeft: 0,
+      flexDirection: 'column',
+      alignItems: 'center',
+    },
   },
 })
 

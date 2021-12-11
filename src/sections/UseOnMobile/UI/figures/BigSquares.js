@@ -10,7 +10,7 @@ import { createUseStyles, useTheme } from 'react-jss'
 const useStyles = createUseStyles({
   bigSquares: {
     position: 'absolute',
-    top: 121,
+    top: ({ top }) => top || 0,
     left: 195,
   },
 
@@ -71,9 +71,9 @@ const useStyles = createUseStyles({
   },
 })
 
-const BigSquares = () => {
+const BigSquares = ({ top }) => {
   const theme = useTheme()
-  const classes = useStyles({ theme })
+  const classes = useStyles({ theme, top })
 
   return (
     <div className={classes.bigSquares}>

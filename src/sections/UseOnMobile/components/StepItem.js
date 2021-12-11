@@ -12,7 +12,7 @@ import Circle from '../UI/icons/Circle'
 const useStyles = createUseStyles({
   step: {
     display: 'flex',
-    flexDirection: ({ flexDirection }) => flexDirection,
+    flexDirection: ({ flexDirection }) => flexDirection || 'column',
     alignItems: 'center',
   },
 

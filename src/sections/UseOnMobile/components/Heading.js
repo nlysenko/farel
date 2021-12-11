@@ -16,6 +16,11 @@ const useStyles = createUseStyles({
     alignItems: 'center',
     justifyContent: 'center',
     paddingTop: 31,
+
+    '@media (max-width: 680px)': {
+      paddingTop: 25,
+      flexDirection: 'column',
+    },
   },
 
   caption: {
@@ -32,6 +37,14 @@ const useStyles = createUseStyles({
     '@media (max-width: 790px)': {
       fontSize: 20,
       paddingLeft: 27,
+    },
+
+    '@media (max-width: 680px)': {
+      padding: {
+        left: 0,
+        right: 0,
+        bottom: 10,
+      },
     },
   },
 })
