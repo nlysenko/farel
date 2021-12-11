@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/farel/static/js/main.2def4c58.chunk.js",
-    "main.js.map": "/farel/static/js/main.2def4c58.chunk.js.map",
+    "main.js": "/farel/static/js/main.9eace4cb.chunk.js",
+    "main.js.map": "/farel/static/js/main.9eace4cb.chunk.js.map",
     "runtime-main.js": "/farel/static/js/runtime-main.666a4f48.js",
     "runtime-main.js.map": "/farel/static/js/runtime-main.666a4f48.js.map",
-    "static/js/2.8a805ee7.chunk.js": "/farel/static/js/2.8a805ee7.chunk.js",
-    "static/js/2.8a805ee7.chunk.js.map": "/farel/static/js/2.8a805ee7.chunk.js.map",
+    "static/js/2.ec5344fc.chunk.js": "/farel/static/js/2.ec5344fc.chunk.js",
+    "static/js/2.ec5344fc.chunk.js.map": "/farel/static/js/2.ec5344fc.chunk.js.map",
     "index.html": "/farel/index.html",
-    "static/js/2.8a805ee7.chunk.js.LICENSE.txt": "/farel/static/js/2.8a805ee7.chunk.js.LICENSE.txt",
+    "static/js/2.ec5344fc.chunk.js.LICENSE.txt": "/farel/static/js/2.ec5344fc.chunk.js.LICENSE.txt",
     "static/media/airplane.66bee7c4.webp": "/farel/static/media/airplane.66bee7c4.webp",
     "static/media/app-store-icon.771cf2fb.webp": "/farel/static/media/app-store-icon.771cf2fb.webp",
     "static/media/app-store-qr.91964a48.webp": "/farel/static/media/app-store-qr.91964a48.webp",
@@ -22,12 +22,14 @@
     "static/media/logo-farel.585339c8.webp": "/farel/static/media/logo-farel.585339c8.webp",
     "static/media/loreal.4ba54d65.webp": "/farel/static/media/loreal.4ba54d65.webp",
     "static/media/national-geographic.926c7a92.webp": "/farel/static/media/national-geographic.926c7a92.webp",
+    "static/media/one-airplane.647c2f20.webp": "/farel/static/media/one-airplane.647c2f20.webp",
     "static/media/phone.22cbe7c2.webp": "/farel/static/media/phone.22cbe7c2.webp",
+    "static/media/planet.64b496d8.webp": "/farel/static/media/planet.64b496d8.webp",
     "static/media/volkswagen.11ab1b4f.webp": "/farel/static/media/volkswagen.11ab1b4f.webp"
   },
   "entrypoints": [
     "static/js/runtime-main.666a4f48.js",
-    "static/js/2.8a805ee7.chunk.js",
-    "static/js/main.2def4c58.chunk.js"
+    "static/js/2.ec5344fc.chunk.js",
+    "static/js/main.9eace4cb.chunk.js"
   ]
 }
