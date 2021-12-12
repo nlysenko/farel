@@ -14,7 +14,7 @@ const useStyles = createUseStyles({
     display: 'block',
     width: ({ stylization }) => stylization.width || 10,
     height: ({ stylization }) => stylization.height || 1,
-    backgroundColor: ({ theme }) => theme.togglerLangBgColor,
+    backgroundColor: ({ theme }) => theme.mainBlueColor,
     transform: ({ stylization }) => `rotate(${stylization.tiltAngle || 45})`,
     top: ({ stylization }) => stylization.top || 0,
     left: ({ stylization }) => stylization.left || 0,

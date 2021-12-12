@@ -148,7 +148,7 @@ const Instruction = () => {
 
   const classes = useStyles({ theme })
   return (
-    <div className={classes.instruction}>
+    <div id="howItWorks" className={classes.instruction}>
       <div className={classes.item}>
         <i className={classes.counter}>1</i>
 

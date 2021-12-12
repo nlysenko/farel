@@ -31,7 +31,7 @@ const useStyles = createUseStyles({
     height: 16,
     top: 0,
     left: 0,
-    backgroundColor: ({ theme }) => theme.togglerLangBgColor,
+    backgroundColor: ({ theme }) => theme.mainBlueColor,
   },
 
   square2: {
@@ -40,7 +40,7 @@ const useStyles = createUseStyles({
     height: 22,
     top: 6,
     left: 9,
-    backgroundColor: ({ theme }) => theme.togglerLangBgColor,
+    backgroundColor: ({ theme }) => theme.mainBlueColor,
   },
 
   square3: {
@@ -49,7 +49,7 @@ const useStyles = createUseStyles({
     height: 11,
     top: 3,
     left: 24,
-    backgroundColor: ({ theme }) => theme.togglerLangBgColor,
+    backgroundColor: ({ theme }) => theme.mainBlueColor,
   },
 
   square4: {
@@ -58,7 +58,7 @@ const useStyles = createUseStyles({
     height: 9,
     top: 29,
     left: 0,
-    backgroundColor: ({ theme }) => theme.togglerLangBgColor,
+    backgroundColor: ({ theme }) => theme.mainBlueColor,
   },
 
   square5: {
@@ -67,7 +67,7 @@ const useStyles = createUseStyles({
     height: 5,
     top: 29,
     left: 28,
-    backgroundColor: ({ theme }) => theme.togglerLangBgColor,
+    backgroundColor: ({ theme }) => theme.mainBlueColor,
   },
 })
 

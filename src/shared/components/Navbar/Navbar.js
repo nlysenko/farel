@@ -71,9 +71,9 @@ const Navbar = () => {
             activeClass={classes.active}
             spy={true}
             smooth={true}
-            offset={-70}
+            offset={-100}
             duration={500}
-            to="top"
+            to="tekrum"
           >
             {t('header.act')}
           </Link>
@@ -85,9 +85,9 @@ const Navbar = () => {
             activeClass={classes.active}
             spy={true}
             smooth={true}
-            offset={-70}
+            offset={-100}
             duration={500}
-            to="using"
+            to="companies"
           >
             {t('header.using')}
           </Link>
@@ -99,9 +99,9 @@ const Navbar = () => {
             activeClass={classes.active}
             spy={true}
             smooth={true}
-            offset={-70}
+            offset={-100}
             duration={500}
-            to="#"
+            to="using"
           >
             {t('header.works')}
           </Link>
@@ -127,9 +127,9 @@ const Navbar = () => {
             activeClass={classes.active}
             spy={true}
             smooth={true}
-            offset={-70}
+            offset={-100}
             duration={500}
-            to="#"
+            to="contacts"
           >
             {t('header.contacts')}
           </Link>

@@ -15,6 +15,7 @@ const useStyles = createUseStyles({
     borderRadius: '50%',
     border: 'none',
     cursor: 'pointer',
+    backgroundColor: ({ backgroundColor }) => backgroundColor || 'white',
   },
 
   triangle: {
@@ -28,17 +29,12 @@ const useStyles = createUseStyles({
   },
 })
 
-const PlayBtn = ({ white }) => {
+const PlayBtn = ({ backgroundColor }) => {
   const theme = useTheme()
 
-  const classes = useStyles({ theme })
+  const classes = useStyles({ theme, backgroundColor })
   return (
-    <button
-      className={classes.circle}
-      style={
-        white ? { backgroundColor: 'white' } : { backgroundColor: 'black' }
-      }
-    >
+    <button className={classes.circle}>
       <i className={classes.triangle} />
     </button>
   )

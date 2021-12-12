@@ -159,7 +159,7 @@ const ThemeSwitcher = (props) => {
         ref={ref}
         onClick={toggleMenu}
       >
-        {t('header.theme')}
+        {t('header.layout')}
       </button>
 
       <CSSTransition

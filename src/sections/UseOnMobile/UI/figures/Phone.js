@@ -9,7 +9,7 @@ import { createUseStyles, useTheme } from 'react-jss'
 
 const useStyles = createUseStyles({
   phone: {
-    backgroundColor: ({ theme }) => theme.togglerLangBgColor,
+    backgroundColor: ({ theme }) => theme.mainBlueColor,
     width: 50,
     height: 100,
     borderRadius: 11,

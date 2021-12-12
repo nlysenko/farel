@@ -28,10 +28,10 @@ const useStyles = createUseStyles({
     fontSize: 28,
     textTransform: 'uppercase',
     textAlign: 'center',
-    color: ({ theme }) => theme.mainTextColor,
+    color: ({ theme }) => theme.headerColor,
     padding: {
-      left: 80,
-      right: 27,
+      left: 65,
+      right: 15,
     },
 
     '@media (max-width: 790px)': {
@@ -56,9 +56,11 @@ const Heading = () => {
 
   return (
     <div className={classes.heading}>
-      <h1 className={classes.caption}>{t('useOnMobile.caption')}</h1>
+      <h1 className={classes.caption}>
+        {t('useOnContactlessScreens.caption')}
+      </h1>
 
-      <PlayBtn />
+      <PlayBtn backgroundColor="black" />
     </div>
   )
 }
