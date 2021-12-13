@@ -12,12 +12,12 @@ const useStyles = createUseStyles({
     position: 'absolute',
     borderRadius: 1,
     display: 'block',
-    width: ({ stylization }) => stylization.width || 10,
-    height: ({ stylization }) => stylization.height || 1,
+    width: ({ stylization }) => stylization.width,
+    height: ({ stylization }) => stylization.height,
     backgroundColor: ({ theme }) => theme.mainBlueColor,
-    transform: ({ stylization }) => `rotate(${stylization.tiltAngle || 45})`,
-    top: ({ stylization }) => stylization.top || 0,
-    left: ({ stylization }) => stylization.left || 0,
+    transform: ({ stylization }) => `rotate(${stylization.tiltAngle})`,
+    top: ({ stylization }) => stylization.top,
+    left: ({ stylization }) => stylization.left,
   },
 })
 

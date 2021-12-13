@@ -12,7 +12,7 @@ import StepItem from './StepItem'
 import Markets from './Markets'
 
 import Phone from '../UI/figures/Phone'
-import Line from '../UI/figures/Line'
+import Line from 'shared/components/Line/Line'
 import Arrow from '../UI/figures/Arrow'
 import TShapedLines from '../UI/figures/TShapedLines'
 

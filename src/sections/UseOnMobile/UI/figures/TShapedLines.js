@@ -7,7 +7,7 @@
 import React from 'react'
 import { createUseStyles } from 'react-jss'
 
-import Line from './Line'
+import Line from 'shared/components/Line/Line'
 
 const useStyles = createUseStyles({
   tShapedLines: {

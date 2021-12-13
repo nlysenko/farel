@@ -8,7 +8,7 @@ import React from 'react'
 import { createUseStyles } from 'react-jss'
 import { Link } from 'react-scroll'
 
-import Line from '../UI/figures/Line'
+import Line from 'shared/components/Line/Line'
 
 import AppStore from 'assets/img/app-store-icon.webp'
 import GooglePlay from 'assets/img/google-play-icon.webp'
