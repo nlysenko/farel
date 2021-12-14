@@ -87,6 +87,7 @@ const useStyles = createUseStyles({
     '&:hover': {
       cursor: 'pointer',
       color: ({ theme }) => theme.hoverBrandLink,
+      borderColor: ({ theme }) => theme.hoverBrandLink,
     },
   },
 

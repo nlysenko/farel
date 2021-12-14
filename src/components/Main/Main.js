@@ -11,6 +11,8 @@ import Top from 'sections/Top/Top'
 import Using from 'sections/Using/Using'
 import Tekrum from 'sections/Tekrum/Tekrum'
 import Companies from 'sections/Companies/Companies'
+import UseOnMobile from 'sections/UseOnMobile/UseOnMobile'
+import UseOnContactlessScreens from 'sections/UseOnContactlessScreens/UseOnContactlessScreens'
 
 const useStyles = createUseStyles({
   main: {
@@ -24,12 +26,14 @@ const Main = () => {
   return (
     <main className={classes.main}>
       <Top />
-
       <Using />
-
       <Tekrum />
-
       <Companies />
+
+      <div id="using">
+        <UseOnMobile />
+        <UseOnContactlessScreens />
+      </div>
     </main>
   )
 }

@@ -39,6 +39,7 @@ const useStyles = createUseStyles({
 
     '@media (max-width: 790px)': {
       fontSize: 16,
+      paddingLeft: 0,
     },
   },
 
@@ -99,7 +100,7 @@ const Top = () => {
 
         <div className={classes.inner}>
           <Link
-            to="using"
+            to="tekrum"
             spy={true}
             smooth={true}
             offset={-70}

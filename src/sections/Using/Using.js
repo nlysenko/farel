@@ -24,7 +24,7 @@ const Using = () => {
 
   const classes = useStyles({ theme })
   return (
-    <section id="using">
+    <section>
       <div className={classes.container}>
         <BrandName />
 

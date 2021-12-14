@@ -45,7 +45,7 @@ const Tekrum = () => {
 
   const classes = useStyles({ theme })
   return (
-    <section className={classes.tekrum}>
+    <section id="tekrum" className={classes.tekrum}>
       <div className={classes.container}>
         <p className={classes.info}>{t('tekrum.info')}</p>
       </div>

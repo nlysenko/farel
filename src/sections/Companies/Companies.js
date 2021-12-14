@@ -67,7 +67,7 @@ const Companies = () => {
 
   const classes = useStyles({ theme })
   return (
-    <section className={classes.companiesSection}>
+    <section id="companies" className={classes.companiesSection}>
       <div className={classes.container}>
         <h2 className={classes.caption}>{t('companies.caption')}</h2>
 

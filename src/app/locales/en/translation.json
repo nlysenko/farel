@@ -5,7 +5,7 @@
     "works": "How it works?",
     "blog": "Blog",
     "contacts": "Contacts",
-    "theme": "Theme",
+    "layout": "Layout",
     "dark": "Dark",
     "light": "Light"
   },
@@ -27,5 +27,23 @@
 
   "companies": {
     "caption": "The use of augmented reality by global companies"
+  },
+
+  "useOnMobile": {
+    "caption": "Use on a mobile phone",
+    "instruction1": "Download and install applications",
+    "instruction2": "Launch applications and point the camera at the target",
+    "instruction3": "Use augmented reality"
+  },
+
+  "useOnContactlessScreens": {
+    "caption": "Use on contactless screens",
+    "instruction1": "We install the necessary equipment",
+    "instruction2": "Fixing a person when hitting a target",
+    "instruction3": "Interaction with augmented reality",
+    "target": "Target",
+    "computer": "Computer",
+    "camera": "Kinect camera",
+    "screen": " Video screen"
   }
 }
