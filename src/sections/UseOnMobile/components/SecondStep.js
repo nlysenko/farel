@@ -7,14 +7,15 @@
 import React from 'react'
 import { createUseStyles } from 'react-jss'
 import { useTranslation } from 'react-i18next'
-import useWindowWidth from 'app/useWindowWidth'
 
 import Line from 'shared/components/Line/Line'
-import Arrow from '../UI/figures/Arrow'
+import Arrow from 'shared/components/Arrow/Arrow'
 import Phone from '../UI/figures/Phone'
-import StepItem from './StepItem'
+import StepName from 'shared/components/StepName/StepName'
 import SmallSquares from '../UI/figures/SmallSquares'
 import BigSquares from '../UI/figures/BigSquares'
+
+import useWindowWidth from 'app/useWindowWidth'
 
 const useStyles = createUseStyles({
   secondStep: {
@@ -126,7 +127,7 @@ const SecondStep = () => {
       </div>
 
       <div className={classes.phoneWrap}>
-        <StepItem
+        <StepName
           options={{ name: t('useOnMobile.instruction2'), num: '2' }}
           stylization={width <= 680 ? stepItemMobileStyles : stepItemStyles}
         />

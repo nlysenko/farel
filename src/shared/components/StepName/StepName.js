@@ -1,13 +1,13 @@
 /**
  *
- * StepItem
+ * StepName
  *
  */
 
 import React from 'react'
 import { createUseStyles, useTheme } from 'react-jss'
 
-import Circle from '../UI/icons/Circle'
+import Circle from 'shared/components/Circle/Circle'
 
 const useStyles = createUseStyles({
   step: {
@@ -18,17 +18,20 @@ const useStyles = createUseStyles({
 
   stepName: {
     fontSize: 15,
-    color: ({ theme }) => theme.mainTextColor,
+    color: ({ theme, color }) => {
+      return color === 'dark' ? theme.mainColor : theme.mainTextColor
+    },
+
     lineHeight: 1.2,
     textAlign: 'center',
   },
 })
 
-const StepItem = ({ options, stylization }) => {
-  const { flexDirection, margin } = stylization
+const StepName = ({ options, stylization }) => {
+  const { flexDirection, margin, color } = stylization
   const { name, num } = options
   const theme = useTheme()
-  const classes = useStyles({ theme, flexDirection })
+  const classes = useStyles({ theme, flexDirection, color })
 
   return (
     <div className={classes.step}>
@@ -39,4 +42,4 @@ const StepItem = ({ options, stylization }) => {
   )
 }
 
-export default StepItem
+export default StepName

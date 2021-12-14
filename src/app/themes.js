@@ -23,6 +23,7 @@ export const darkTheme = {
   arrowActiveColor: 'rgb(13, 179, 208)',
   cornerColor: 'rgb(114, 114, 114)',
   hoverBrandLink: 'rgb(97, 132, 139)',
+  screenBorderColor: 'rgb(227, 227, 227)',
 
   //borders
   brRadius: 0,
@@ -47,6 +48,7 @@ export const lightTheme = {
   arrowActiveColor: 'rgb(53, 124, 24)',
   cornerColor: 'rgb(231, 214, 214)',
   hoverBrandLink: 'rgb(53, 124, 24)',
+  screenBorderColor: 'rgb(227, 227, 227)',
 
   //borders
   brRadius: 5,

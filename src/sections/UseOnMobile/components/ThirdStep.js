@@ -8,7 +8,7 @@ import React from 'react'
 import { createUseStyles, useTheme } from 'react-jss'
 import { useTranslation } from 'react-i18next'
 
-import StepItem from './StepItem'
+import StepName from 'shared/components/StepName/StepName'
 
 import Phone from '../UI/figures/Phone'
 import TShapedLines from '../UI/figures/TShapedLines'
@@ -126,7 +126,7 @@ const ThirdStep = () => {
       </div>
 
       <div className={classes.stepItemWrap}>
-        <StepItem
+        <StepName
           options={{ name: t('useOnMobile.instruction3'), num: '3' }}
           stylization={stepItemStyles}
         />

@@ -8,12 +8,12 @@ import React from 'react'
 import { createUseStyles, useTheme } from 'react-jss'
 import { useTranslation } from 'react-i18next'
 
-import StepItem from './StepItem'
+import StepName from 'shared/components/StepName/StepName'
 import Markets from './Markets'
 
 import Phone from '../UI/figures/Phone'
 import Line from 'shared/components/Line/Line'
-import Arrow from '../UI/figures/Arrow'
+import Arrow from 'shared/components/Arrow/Arrow'
 import TShapedLines from '../UI/figures/TShapedLines'
 
 const useStyles = createUseStyles({
@@ -44,7 +44,7 @@ const useStyles = createUseStyles({
 
 const arrowStyles = { tiltAngle: '90deg', top: 38, left: 8 }
 const lineStyles = { top: 59, left: 14, width: 18, height: 2 }
-const stepItemStyles = { flexDirection: 'column', margin: '16' }
+const stepNameStyles = { flexDirection: 'column', margin: '16' }
 
 const FirstStep = () => {
   const { t } = useTranslation()
@@ -67,9 +67,13 @@ const FirstStep = () => {
         </div>
       </div>
 
-      <StepItem
-        options={{ name: t('useOnMobile.instruction1'), num: '1' }}
-        stylization={stepItemStyles}
+      <StepName
+        options={{
+          name: t('useOnMobile.instruction1'),
+          num: '1',
+          color: 'light',
+        }}
+        stylization={stepNameStyles}
       />
     </div>
   )

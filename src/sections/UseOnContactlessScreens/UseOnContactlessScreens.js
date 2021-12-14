@@ -9,6 +9,8 @@ import { createUseStyles } from 'react-jss'
 
 import Heading from './components/Heading'
 import FirstStep from './components/FirstStep'
+import SecondStep from './components/SecondStep'
+import ThirdStep from './components/ThirdStep'
 
 const useStyles = createUseStyles({
   container: {
@@ -25,8 +27,7 @@ const useStyles = createUseStyles({
       bottom: 28,
     },
 
-    '@media (max-width: 680px)': {
-      paddingLeft: 0,
+    '@media (max-width: 790px)': {
       flexDirection: 'column',
       alignItems: 'center',
     },
@@ -43,6 +44,10 @@ const UseOnContactlessScreens = () => {
 
         <div className={classes.wrapper}>
           <FirstStep />
+
+          <SecondStep />
+
+          <ThirdStep />
         </div>
       </div>
     </section>
