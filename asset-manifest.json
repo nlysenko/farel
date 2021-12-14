@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/farel/static/js/main.5c53aa78.chunk.js",
-    "main.js.map": "/farel/static/js/main.5c53aa78.chunk.js.map",
+    "main.js": "/farel/static/js/main.053d9cf8.chunk.js",
+    "main.js.map": "/farel/static/js/main.053d9cf8.chunk.js.map",
     "runtime-main.js": "/farel/static/js/runtime-main.666a4f48.js",
     "runtime-main.js.map": "/farel/static/js/runtime-main.666a4f48.js.map",
     "static/js/2.4ac8e6d7.chunk.js": "/farel/static/js/2.4ac8e6d7.chunk.js",
@@ -21,6 +21,8 @@
     "static/media/invircasa.9a38ac1c.webp": "/farel/static/media/invircasa.9a38ac1c.webp",
     "static/media/logo-farel.585339c8.webp": "/farel/static/media/logo-farel.585339c8.webp",
     "static/media/loreal.4ba54d65.webp": "/farel/static/media/loreal.4ba54d65.webp",
+    "static/media/man-in-sity.51341012.webp": "/farel/static/media/man-in-sity.51341012.webp",
+    "static/media/man.30885fa8.webp": "/farel/static/media/man.30885fa8.webp",
     "static/media/national-geographic.926c7a92.webp": "/farel/static/media/national-geographic.926c7a92.webp",
     "static/media/one-airplane.647c2f20.webp": "/farel/static/media/one-airplane.647c2f20.webp",
     "static/media/phone.22cbe7c2.webp": "/farel/static/media/phone.22cbe7c2.webp",
@@ -30,6 +32,6 @@
   "entrypoints": [
     "static/js/runtime-main.666a4f48.js",
     "static/js/2.4ac8e6d7.chunk.js",
-    "static/js/main.5c53aa78.chunk.js"
+    "static/js/main.053d9cf8.chunk.js"
   ]
 }
