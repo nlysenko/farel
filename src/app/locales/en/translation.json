@@ -45,5 +45,19 @@
     "computer": "Computer",
     "camera": "Kinect camera",
     "screen": " Video screen"
+  },
+
+  "contacts": {
+    "caption": "we are always in touch",
+    "contactsName": "Contacts:",
+    "socialNetworks": "Social networks:",
+    "feedback": "Feedback:",
+    "postButton": "Send",
+    "mailAddress": "mail@gmail.com",
+    "phoneNumber": "044 435 43 56",
+    "address": "Kiev, st. Konstantinovskaya 73",
+    "name": "Name",
+    "mail": "Mail",
+    "phone": "Phone"
   }
 }

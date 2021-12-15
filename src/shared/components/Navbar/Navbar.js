@@ -129,7 +129,7 @@ const Navbar = () => {
             smooth={true}
             offset={-100}
             duration={500}
-            to="contacts"
+            to="feeback"
           >
             {t('header.contacts')}
           </Link>

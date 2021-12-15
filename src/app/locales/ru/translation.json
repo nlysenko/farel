@@ -45,5 +45,19 @@
     "computer": "Компьютер",
     "camera": "Камера Kinect",
     "screen": " Видеоэкран"
+  },
+
+  "contacts": {
+    "caption": "мы всегда на связи",
+    "contactsName": "Контакты:",
+    "socialNetworks": "Соц. сети:",
+    "feedback": "Обратная связь:",
+    "postButton": "Отправить",
+    "mailAddress": "mail@gmail.com",
+    "phoneNumber": "044 435 43 56",
+    "address": "г.Киев, ул. Константиновская 73",
+    "name": "Имя",
+    "mail": "Почта",
+    "phone": "Телефон"
   }
 }
