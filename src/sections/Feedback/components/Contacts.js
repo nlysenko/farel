@@ -69,6 +69,11 @@ const useStyles = createUseStyles({
   mailAddress: {
     marginLeft: 19,
     cursor: 'pointer',
+    color: ({ theme }) => theme.mainTextColor,
+
+    '&:hover': {
+      opacity: 0.7,
+    },
   },
 
   phoneNumber: {

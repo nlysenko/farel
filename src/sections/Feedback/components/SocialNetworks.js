@@ -32,7 +32,6 @@ const useStyles = createUseStyles({
   },
 
   list: {
-    color: ({ theme }) => theme.mainTextColor,
     paddingTop: 15,
   },
 
@@ -68,7 +67,13 @@ const useStyles = createUseStyles({
   },
 
   userName: {
+    color: ({ theme }) => theme.mainTextColor,
     marginLeft: 25,
+    cursor: 'pointer',
+
+    '&:hover': {
+      opacity: 0.7,
+    },
   },
 })
 
