@@ -11,6 +11,9 @@ export const darkTheme = {
   mainColor: 'rgb(63, 63, 63)',
   mainBlueColor: 'rgb(0, 175, 206)',
   mainTextColor: 'rgb(255, 255, 255)',
+  inputBgColor: 'rgb(243, 243, 243)',
+  inputTextColor: 'rgb(63, 63, 63)',
+  inputPlaceholderColor: 'rgb(106, 106, 106)',
   togglerLangBgColor: 'rgb(0, 175, 206)',
   activeLinkBrColor: 'rgb(0, 175, 206)',
   togglerBgColor: 'rgb(255, 191, 0)',
@@ -24,6 +27,7 @@ export const darkTheme = {
   cornerColor: 'rgb(114, 114, 114)',
   hoverBrandLink: 'rgb(97, 132, 139)',
   screenBorderColor: 'rgb(227, 227, 227)',
+  validationErrorColor: 'rgb(222, 222, 222)',
 
   //borders
   brRadius: 0,
@@ -36,6 +40,9 @@ export const lightTheme = {
   mainColor: 'rgb(236, 245, 253)',
   mainBlueColor: 'rgb(0, 175, 206)',
   mainTextColor: 'rgb(54, 54, 54)',
+  inputBgColor: 'rgb(193, 223, 221)',
+  inputTextColor: 'rgb(22, 23, 33)',
+  inputPlaceholderColor: 'rgb(106, 106, 106)',
   togglerLangBgColor: 'rgb(82, 159, 50)',
   activeLinkBrColor: 'rgb(82, 159, 50)',
   togglerBgColor: 'rgb(211, 207, 197)',
@@ -49,6 +56,7 @@ export const lightTheme = {
   cornerColor: 'rgb(231, 214, 214)',
   hoverBrandLink: 'rgb(53, 124, 24)',
   screenBorderColor: 'rgb(227, 227, 227)',
+  validationErrorColor: 'rgb(255,69,0)',
 
   //borders
   brRadius: 5,

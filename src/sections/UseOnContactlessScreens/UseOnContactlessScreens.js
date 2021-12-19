@@ -23,9 +23,7 @@ const useStyles = createUseStyles({
     display: 'flex',
     maxWidth: 800,
     margin: [0, 'auto'],
-    padding: {
-      bottom: 28,
-    },
+    paddingBottom: 29,
 
     '@media (max-width: 790px)': {
       flexDirection: 'column',

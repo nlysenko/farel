@@ -56,7 +56,7 @@ const Heading = () => {
 
   return (
     <div className={classes.heading}>
-      <h1 className={classes.caption}>{t('useOnMobile.caption')}</h1>
+      <h2 className={classes.caption}>{t('useOnMobile.caption')}</h2>
 
       <PlayBtn />
     </div>

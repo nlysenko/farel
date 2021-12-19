@@ -23,12 +23,6 @@ const stepNameStyles = {
   color: 'dark',
 }
 
-const stepNameMobileStyles = {
-  flexDirection: 'column',
-  margin: 12,
-  color: 'dark',
-}
-
 const useStyles = createUseStyles({
   secondStep: {
     maxWidth: 253,

@@ -56,9 +56,9 @@ const Heading = () => {
 
   return (
     <div className={classes.heading}>
-      <h1 className={classes.caption}>
+      <h2 className={classes.caption}>
         {t('useOnContactlessScreens.caption')}
-      </h1>
+      </h2>
 
       <PlayBtn backgroundColor="black" />
     </div>
