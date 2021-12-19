@@ -4,9 +4,13 @@
  *
  */
 
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { createUseStyles, useTheme } from 'react-jss'
 import { useTranslation } from 'react-i18next'
+
+import InputErrorField from './InputErrorField'
+
+import useInput from './useInput'
 
 const useStyles = createUseStyles({
   registrationForm: {
@@ -24,7 +28,7 @@ const useStyles = createUseStyles({
     fontFamily: 'OpenSans-Light',
     padding: [0, 11],
     fontSize: 15,
-    color: ({ theme }) => theme.mainColor,
+    color: ({ theme }) => theme.inputTextColor,
     width: 243,
     height: 31,
 
@@ -46,84 +50,20 @@ const useStyles = createUseStyles({
     fontSize: 18,
     color: ({ theme }) => theme.mainTextColor,
     backgroundColor: ({ theme }) => theme.mainBlueColor,
-    cursor: 'pointer',
 
     '&:hover': {
       backgroundColor: ({ theme }) => theme.arrowActiveColor,
       color: ({ theme }) => theme.inputBgColor,
+      cursor: 'pointer',
+    },
+
+    '&:disabled': {
+      cursor: 'default',
+      backgroundColor: ({ theme }) => theme.mobileMenuLineColor,
+      color: ({ theme }) => theme.inputTextColor,
     },
   },
 })
-
-const useValidation = (value, validations) => {
-  const [isEmpty, setIsEmpty] = useState(true)
-  const [minLengthError, setMinLengthError] = useState(false)
-  const [emailError, setEmailError] = useState(false)
-  const [inputValid, setInputValid] = useState(false)
-
-  useEffect(() => {
-    for (const validation in validations) {
-      switch (validation) {
-        case 'minLength':
-          value.length < validations[validation]
-            ? setMinLengthError(true)
-            : setMinLengthError(false)
-          break
-
-        case 'isEmpty':
-          value ? setIsEmpty(false) : setIsEmpty(true)
-          break
-
-        case 'isEmail':
-          const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-          re.test(String(value).toLowerCase())
-            ? setEmailError(false)
-            : setEmailError(true)
-          break
-
-        default:
-      }
-    }
-  }, [value, validations])
-
-  useEffect(() => {
-    if (isEmpty || minLengthError || emailError) {
-      setInputValid(false)
-    } else {
-      setInputValid(true)
-    }
-  }, [isEmpty, minLengthError, emailError])
-
-  return {
-    isEmpty,
-    minLengthError,
-    emailError,
-    inputValid,
-  }
-}
-
-const useInput = (initialValue, validations) => {
-  const [value, setValue] = useState(initialValue)
-  const [isDirty, setIsDirty] = useState(false)
-
-  const valid = useValidation(value, validations)
-
-  const onChange = (e) => {
-    setValue(e.target.value)
-  }
-
-  const onBlur = () => {
-    setIsDirty(true)
-  }
-
-  return {
-    value,
-    onChange,
-    onBlur,
-    isDirty,
-    ...valid,
-  }
-}
 
 const RegistrationForm = () => {
   const { t } = useTranslation()
@@ -132,12 +72,31 @@ const RegistrationForm = () => {
 
   const classes = useStyles({ theme })
 
-  const name = useInput('', { isEmpty: 'true', minLength: 3 })
-  const email = useInput('', { isEmpty: 'true', minLength: 5, isEmail: true })
-  const phone = useInput('', { isEmpty: 'true', minLength: 7 })
+  const name = useInput('', { isEmpty: true, isName: true })
+
+  const email = useInput('', { isEmpty: true, isEmail: true })
+
+  const phone = useInput('', { isEmpty: true, isPhone: true })
+
+  const hendleSubmit = (e) => {
+    e.preventDefault()
+
+    const data = {
+      name: name.value,
+      email: email.value,
+      phone: phone.value,
+      id: Date.now(),
+    }
+
+    console.log('data: ', data)
+  }
 
   return (
-    <form name="RegistrationForm" className={classes.registrationForm}>
+    <form
+      name="RegistrationForm"
+      onSubmit={(e) => hendleSubmit(e)}
+      className={classes.registrationForm}
+    >
       <div className={classes.formGroup}>
         <input
           type="text"
@@ -148,17 +107,7 @@ const RegistrationForm = () => {
           className={classes.entryField}
         />
 
-        {name.isDirty && name.isEmpty ? (
-          <div>Поле не может быть пустым</div>
-        ) : (
-          false
-        )}
-
-        {name.isDirty && name.minLengthError ? (
-          <div>Слишком короткое имя!</div>
-        ) : (
-          false
-        )}
+        <InputErrorField field="name" input={name} />
       </div>
 
       <div className={classes.formGroup}>
@@ -171,17 +120,7 @@ const RegistrationForm = () => {
           className={classes.entryField}
         />
 
-        {email.isDirty && email.isEmpty ? (
-          <div>Поле не может быть пустым</div>
-        ) : (
-          false
-        )}
-
-        {email.isDirty && email.emailError ? (
-          <div>Некорректный эмейл</div>
-        ) : (
-          false
-        )}
+        <InputErrorField field="email" input={email} />
       </div>
 
       <div className={classes.formGroup}>
@@ -194,22 +133,12 @@ const RegistrationForm = () => {
           className={classes.entryField}
         />
 
-        {phone.isDirty && phone.isEmpty ? (
-          <div>Поле не может быть пустым</div>
-        ) : (
-          false
-        )}
-
-        {phone.isDirty && phone.minLengthError ? (
-          <div>Не менее 7 символов</div>
-        ) : (
-          false
-        )}
+        <InputErrorField field="phone" input={phone} />
       </div>
 
       <button
         type="submit"
-        disabled={!name.inputValid || !email.inputValid || phone.inputValid}
+        disabled={!name.inputValid || !email.inputValid || !phone.inputValid}
         className={classes.submitBtn}
       >
         {t('contacts.postButton')}

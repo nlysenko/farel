@@ -58,6 +58,10 @@
     "address": "Kiev, st. Konstantinovskaya 73",
     "name": "Name",
     "mail": "Mail",
-    "phone": "Phone"
+    "phone": "Phone",
+    "error": "This is a required field!",
+    "nameError": "Invalid name format! Should be 2-60 characters.",
+    "emailError": "Invalid email format!",
+    "phoneError": "Invalid phone format! Should start with code of Ukraine +380..."
   }
 }
