@@ -14,6 +14,7 @@ import Companies from 'sections/Companies/Companies'
 import UseOnMobile from 'sections/UseOnMobile/UseOnMobile'
 import UseOnContactlessScreens from 'sections/UseOnContactlessScreens/UseOnContactlessScreens'
 import Feedback from 'sections/Feedback/Feedback'
+import Location from 'sections/Location/Location'
 
 const useStyles = createUseStyles({
   main: {
@@ -41,6 +42,8 @@ const Main = () => {
       </div>
 
       <Feedback />
+
+      <Location />
     </main>
   )
 }

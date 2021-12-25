@@ -15,12 +15,12 @@ import App from 'app/App'
 import './i18n'
 
 ReactDOM.render(
-  <React.StrictMode>
+  <React.Fragment>
     <Suspense fallback={<div>Loading...</div>}>
       <Provider store={store}>
         <App />
       </Provider>
     </Suspense>
-  </React.StrictMode>,
+  </React.Fragment>,
   document.getElementById('root')
 )

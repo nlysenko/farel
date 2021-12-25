@@ -15,7 +15,7 @@ import Registration from './components/Registration'
 const useStyles = createUseStyles({
   feedback: {
     backgroundColor: ({ theme }) => theme.mainColor,
-    paddingBottom: 48,
+    paddingBottom: 19,
   },
 
   container: {
