@@ -7,10 +7,6 @@
 import React from 'react'
 import { createUseStyles, useTheme } from 'react-jss'
 
-import colors from 'styles/colors'
-
-const { lightGrayColor } = colors
-
 const useStyles = createUseStyles({
   icon: {
     display: 'none',
@@ -20,7 +16,7 @@ const useStyles = createUseStyles({
     transition: '0.5s',
 
     '&:hover>span': {
-      backgroundColor: lightGrayColor,
+      backgroundColor: ({ theme }) => theme.screenBorderColor,
     },
 
     '@media (max-width: 790px)': {
